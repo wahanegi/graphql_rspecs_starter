@@ -56,13 +56,7 @@ class Types::MutationType < Types::BaseObject
 
   ### Comment
 
-  field :create_comment, Types::CommentType, null: true, description: "Create a comment" do
-    argument :comment, Types::CommentInputType, required: true, description: "All the attributes required to create a comment"
-  end
-
-  def create_comment(comment:)
-    Comment.create comment.to_h
-  end
+  field :create_comment, Types::CommentType, mutation: Mutations::CreateComment
 
   field :update_comment, Boolean, null: false, description: "Update a comment" do
     argument :comment, Types::CommentInputType, required: true, description: "All the attributes required to update a comment, including ID"

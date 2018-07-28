@@ -1,6 +1,6 @@
 Hello!
 
-This is the instructor's solution for the first and second assignments in the "Basics of GraphQL in Ruby on Rails" course on Udemy.
+This is the instructor's solution for the first, second and third assignments in the "Basics of GraphQL in Ruby on Rails" course on Udemy.
 
 To try out the code, start the Rails app, enter its endpoint into GraphiQL (ex. http://localhost:3000/graphql) and use a query like this one:
 
@@ -169,4 +169,16 @@ Example vars:
 mutation {
   deleteComment(id: 2)
 }
+```
+
+Authentication features:
+
+### Login:
+```graphql
+{login(email:"a@b.c", password:"1")}
+```
+
+### Logout:
+```graphql
+{logout}
 ```
