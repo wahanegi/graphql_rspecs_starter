@@ -18,4 +18,6 @@ class User < ApplicationRecord
 
   has_many :posts, dependent: :destroy
 
+  validates :city, presence: true
+
 end
