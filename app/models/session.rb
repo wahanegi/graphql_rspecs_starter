@@ -14,7 +14,7 @@ class Session < ApplicationRecord
   belongs_to :user
 
   before_create do
-    self.key = SecureRandom.hex(20)
+    self.key = SecureRandom.hex(20) unless self.key
   end
 
 end

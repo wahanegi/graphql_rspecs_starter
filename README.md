@@ -11,8 +11,11 @@ It's been modified in the following ways:
 This assumes you're using RVM.
 1. In terminal, navigate to the folder. If it prompts you to install a new Ruby version follow the directions.
 2. `$ gem install bundler`
-3. `$ bundle`
-4. `$ rails db:create`
+3. Install current gems into gemset: `$ bundle`
+4. Instantiate the database: `$ rails db:create`
+5. Run current migrations: `$ rails db:migrate`
+6. Populate some sample data: `$ rails db:seed`
+
 
 ### To retrieve a user with their posts and comments:
 ```graphql
