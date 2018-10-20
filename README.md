@@ -1,8 +1,18 @@
 Hello!
 
-This is the instructor's solution for the first, second and third assignments in the "Basics of GraphQL in Ruby on Rails" course on Udemy.
+This is based on the instructor's solution for the first, second and third assignments in the "Basics of GraphQL in Ruby on Rails" course on Udemy.
 
-To try out the code, start the Rails app, enter its endpoint into GraphiQL (ex. http://localhost:3000/graphql) and use a query like this one:
+It's been modified in the following ways:
+1. RVM style gemset added: `blog_homework`.
+2. Rspec installed.
+3. Model specs added.
+
+### Getting Started
+This assumes you're using RVM.
+1. In terminal, navigate to the folder. If it prompts you to install a new Ruby version follow the directions.
+2. `$ gem install bundler`
+3. `$ bundle`
+4. `$ rails db:create`
 
 ### To retrieve a user with their posts and comments:
 ```graphql
