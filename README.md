@@ -27,10 +27,20 @@ GraphQL server side testing is to abstract complex logic into classes located in
 writing unit tests for those classes in `/spec/graphql/resolvers`.  
 
 1. Create a classes in `/app/graphql/resolvers` and move over code from the following methods: 
-    - `/app/graphql/types/user_type.rb#address`
-    - `app/graphql/types/query_type.rb#login`
-    - `app/graphql/types/query_type.rb#logout`
-    - Any other GraphQL methods that seems appropriate to test.
+    - `app/graphql/types/user_type.rb` methods:
+        - `address`
+        - `login`
+        - `logout`
+    - `app/graphql/types/mutation_types.rb` methods:
+        - `create_user`
+        - `update_user`
+        - `delete_user`
+        - `create_post`
+        - `update_post`
+        - `delete_post`
+        - `create_comment`
+        - `update_comment`
+        - `delete_comment`
 
 2. For each of the classes above, create corresponding `_spec.rb` files in `/spec/graphql/resolvers`.
 
