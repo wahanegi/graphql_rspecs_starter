@@ -8,25 +8,27 @@ It's been modified in the following ways:
 2. rspec-rails, factory-bot-rails, faker and awesome_print gems installed.
 3. Model specs added for User, Comment, Post and Session.
 
-### Cloning the repo
+### Cloning the repo and getting started locally
 Fork this repo to your personal github and then clone that to your local environment. 
-
-### Getting Started Locally
-This assumes you're using RVM.
-1. In terminal, navigate to the folder. If it prompts you to install a new Ruby version follow the directions.
-2. `$ gem install bundler`
-3. Install current gems into gemset: `$ bundle`
-4. Instantiate the database: `$ rails db:create`
-5. Run current migrations: `$ rails db:migrate`
+1. Click on the "Fork" link on this page (top right) in Github.
+2. Go to settings and change the name of it from `graphql_rspecs_starter` to `graphql_rspecs`.
+3. Click "Clone or Download" green button and copy the content in the box there.
+4. In terminal go to your workspace and clone it via `$ git clone git@github.com:YOUR_GITHUB_HANDLE/graphql_rspecs.git`.
+5. Enter the directory: `$ cd graphql_rspec`
+6. If it prompts you to install a new Ruby version follow the directions.
+7. `$ gem install bundler`
+8. Install current gems into gemset: `$ bundle`
+9. Instantiate the database: `$ rails db:create`
+10. Run current migrations: `$ rails db:migrate`
 
 At this point you should be able to run tests by doing `$ rspec` and they should all pass.
 
 ### Assignment Instructions
-Please review the [GraphQL's Testing Document](http://graphql-ruby.org/schema/testing.html). How we plan on handling 
+Please read the [GraphQL's Testing Document](http://graphql-ruby.org/schema/testing.html). How we plan on handling 
 GraphQL server side testing is to abstract complex logic into classes located in the `/app/graphql/resolvers` folder, and then
-writing unit tests for those classes in `/spec/graphql/resolvers`.  
+writing unit tests for those classes in `/spec/graphql/resolvers` (*NOTE: This is a different location than where the article puts these classes.*).  
 
-1. Create a classes in `/app/graphql/resolvers` and move over code from the following methods: 
+1. Create classes in `/app/graphql/resolvers` and move over code from the following methods: 
     - `app/graphql/types/user_type.rb` methods:
         - `address`
         - `login`

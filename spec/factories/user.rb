@@ -8,7 +8,7 @@ FactoryBot.define do
     postcode { Faker::Address.postcode }
     country { Faker::Address.country }
     email { Faker::Internet.email }
-    password "Password!"
-    role %w[visitor member].sample
+    password { "Password!" }
+    role { %w[visitor member].sample }
   end
 end
