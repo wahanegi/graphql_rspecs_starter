@@ -37,7 +37,7 @@ writing unit tests for those classes in `/spec/graphql/resolvers`.
 *NOTE: The location we are choosing for these classes (`/app/graphql/resolvers`)
 is different than the examples in the testing document (`/app/model/modelname/`).*
 
-Please make sure to adhere to Single Responsibility Principle (SRP) -- which means classes 
-should be simple and only do one thing.
+While making these new classes please make sure to adhere to Single Responsibility Principle (SRP). Classes should be 
+simple and only do one thing.
 
 
