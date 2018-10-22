@@ -3,7 +3,7 @@ Hello!
 This is based on the instructor's solution for the first, second and third assignments in the "Basics of GraphQL in Ruby on Rails" course on Udemy.
 
 It's been modified in the following ways:
-1. RVM style gemset added: `blog_homework`.
+1. RVM style gemset added: `graphql_blog`.
 2. Rspec installed.
 3. Model specs added.
 

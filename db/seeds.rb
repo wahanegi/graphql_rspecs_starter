@@ -20,8 +20,9 @@ janitor =  FactoryBot.create(:user,
   email: 'notboss@cloverpop.com',
   role: 'nobody'
 )
-janitor.sessions.create(key: 'ba21c26ff0522ff1c5b437d35802651bc69e8930')
+janitor.sessions.create(key: '2c5c105ebd171b37daf8248ff2a1666b03560ac9')
 
+# Create random comments, posts, and users
 3.times do
   FactoryBot.create(:comment)
 end
