@@ -112,6 +112,6 @@ Then verify that the changes were saved properly with a query:
 
 
 
-Once completed you can send a link of your repo to Roger and Ben for review.
+Once specs are passing and manual tests are completed you can send a link of your repo to Roger and Ben for review.
 
 
