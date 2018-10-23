@@ -14,9 +14,10 @@ describe Resolvers::User do
     end
   end
 
+  # TEST SUGGESTIONS (TDD PREFERRED)
+
   describe 'methods' do
 
-    # WRITE THE FOLLOWING TESTS (TDD PREFERRED)
     describe '#address' do
 
       it 'works by separating fields with commas'

@@ -1,14 +1,12 @@
-module UserServices
-  class Session
+module Resolvers
+  class User
     attr_reader :user
 
     def initialize(user:)
       @user = user
     end
 
-    # Move over functionality from the following GraphQL methods
-    # and write unit tests:
-    #   - user_type.rb#address
+    # Write unit tests for this class in /spec/graphql/resolvers/user_spec.rb (preferably TDD style)
 
   end
 end

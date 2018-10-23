@@ -30,12 +30,14 @@ class Types::QueryType < Types::BaseObject
   end
 
   def login(email:, password:)
+    # TODO Assignment: move to UserServices::Session /app/services/user_services/session.rb and add test coverage
     User.where(email: email).first&.authenticate(password)&.sessions&.create&.key
   end
 
   field :logout, Boolean, null: false, description: "Logout the current user"
 
   def logout
+    # TODO Assignment: move to class UserServices::Session /app/services/user_services/session.rb and add test coverage
     Session.where(id: context[:session_id]).destroy_all
     true
   end

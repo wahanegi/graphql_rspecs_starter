@@ -15,30 +15,22 @@ describe UserServices::Session do
   end
 
 
-  # WRITE THE FOLLOWING TESTS (TDD PREFERRED)
+  # TEST SUGGESTIONS (TDD PREFERRED)
 
   describe 'methods' do
     describe '#login' do
 
-      it 'creates a session when called'
+      it 'creates a new user.session record when called'
 
-      it 'generates a session key and returns it'
+      it 'returns the new session.key value'
 
     end
 
     describe '#logout' do
 
-      it 'destroys all sessions'
+      it 'destroys all sessions for the user'
 
       it 'returns true'
-
-    end
-
-    describe '#update' do
-
-      it 'updates hash attributes passed'
-
-      it 'ignores passed id if present'
 
     end
 

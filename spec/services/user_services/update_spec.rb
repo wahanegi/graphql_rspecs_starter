@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-describe UserServices::User do
+describe UserServices::Update do
   let!(:user) { FactoryBot.create(:user) }
-  let(:resolver) { UserServices::Session.new(user: user) }
+  let(:resolver) { UserServices::Update.new(user: user) }
 
   describe 'class' do
     it 'exists' do
@@ -15,14 +15,12 @@ describe UserServices::User do
   end
 
 
-  # WRITE THE FOLLOWING TESTS (TDD PREFERRED)
+  # TEST SUGGESTIONS (TDD PREFERRED)
 
   describe 'methods' do
     describe '#update' do
 
-      it 'updates hash attributes passed'
-
-      it 'ignores id if present in passed params'
+      it 'updates user attributes'
 
     end
 

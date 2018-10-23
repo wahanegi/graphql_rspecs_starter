@@ -1,13 +1,13 @@
 module UserServices
   class Session
 
+    attr_reader :user
+
     def initialize(user:)
       @user = user
     end
 
-    # Move over functionality from the following GraphQL methods
-    # and write unit tests:
-    #   - user_type.rb#login
-    #   - user_type.rb#logout
+    # Write unit tests for this class in /spec/services/user_services/session_spec.rb (preferably TDD style)
+
   end
 end
