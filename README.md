@@ -23,33 +23,19 @@ Fork this repo to your personal github and then clone that to your local environ
 
 At this point you should be able to run tests by doing `$ rspec` and they should all pass.
 
-### Assignment Instructions
+### Abstraction Approach
 Please read the [GraphQL's Testing Document](http://graphql-ruby.org/schema/testing.html). How we plan on handling 
-GraphQL server side testing is to abstract complex logic into classes located in the `/app/graphql/resolvers` folder, and then
-writing unit tests for those classes in `/spec/graphql/resolvers` (*NOTE: This is a different location than where the article puts these classes.*).  
+GraphQL server side testing:
+  - If the functionality saves to the database (mutations for example) then put these classes in `/app/services` like we do now. 
+  - If it's business logic that does _not_ save to the database that we should still test, put these into classes located in the `/app/graphql/resolvers` folder.
+  - Write unit tests for these classes in `/spec/graphql/resolvers` and `/spec/services/`. 
 
-1. Create classes in `/app/graphql/resolvers` and move over code from the following methods: 
-    - `app/graphql/types/user_type.rb` methods:
-        - `address`
-        - `login`
-        - `logout`
-    - `app/graphql/types/mutation_types.rb` methods:
-        - `create_user`
-        - `update_user`
-        - `delete_user`
-        - `create_post`
-        - `update_post`
-        - `delete_post`
-        - `create_comment`
-        - `update_comment`
-        - `delete_comment`
+(*NOTE: These are different locations than where the article puts them.*).  
 
-2. For each of the classes above, create corresponding `_spec.rb` files in `/spec/graphql/resolvers`.
+### Assignment Instructions
+1. Fill out the pending specs in `/spec/graphsql/resolvers/user_spec.rb`, then move code from `user_type#address` to `app/graphql/resolvers/user.rb`.
+2. Fill out the pending specs in `/specs/services/user_services/session_spec.rb`, then move code from `user_type#login` and `user_type#logout` to `app/services/user_services/session.rb`.
 
-*NOTE: The location we are choosing for these classes (`/app/graphql/resolvers`)
-is different than the examples in the testing document (`/app/model/modelname/`).*
-
-While making these new classes please make sure to adhere to Single Responsibility Principle (SRP). Classes should be 
-simple and only do one thing.
+Once completed you can send a link of your repo to Roger and Ben for review.
 
 
