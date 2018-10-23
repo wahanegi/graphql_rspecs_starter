@@ -35,7 +35,7 @@ class Types::UserType < Types::BaseObject
   # We intentionally exclude any address component that is nil, empty or made only of whitespaces
   # and we join the rest using a comma.
   def address
-    # TODO Assignment: move logic to class Resolvers::User /app/graphql/resolvers/update.rb and add test coverage
+    # TODO Assignment: move logic to class Resolvers::User /app/graphql/resolvers/user.rb and add test coverage
     ([:street, :number, :postcode, :city, :country].map do |a|
       object.send(a)&.strip
     end.compact - ['']).join(', ')

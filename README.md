@@ -92,7 +92,7 @@ Set Vars:
   "user": {
     "id": "1",
     "firstName": "Jane",
-    "lastName": "NewBoss",
+    "lastName": "NewBoss"
   }
 }
 ```
