@@ -41,7 +41,8 @@ business logic to various classes in `/graphql/resolvers` and `/services/user_se
 After you've moved business logic into classes and have green tests on them it's still possible that the interaction between the
 classes and GraphQL was broken in the process. To make sure everything on the GraphQL side still functions properly:
 1. Run `$ rails db:seed` in terminal.
-2. Use [GraphiQL](https://electronjs.org/apps/graphiql) to test the methods you previously changed to make sure they still work.
+2. Start your Rails server. In terminal you can do this through `$ rails s`.
+3. Use [GraphiQL](https://electronjs.org/apps/graphiql) to test the methods you previously changed to make sure they still work.
 
 ##### Testing `user_type#address` Changes
 ```graphql
