@@ -114,4 +114,4 @@ Then verify that the firstName and lastName were updated properly to "Jane" and 
 
 ### Assignment Submission
 
-After you have completed the assignment, send a link of your repo to Roger and Ben for review.
+After you have completed the assignment create a pull request and add rogergraves as a reviewer.
