@@ -26,7 +26,7 @@ At this point you should be able to run tests by doing `$ rspec` and they should
 ### Abstraction Approach to Tests
 Please read the [GraphQL's Testing Document](http://graphql-ruby.org/schema/testing.html). How we plan on handling 
 GraphQL server side testing differently than this article:
-  - If the functionality saves to the database (mutations for example) then put these classes in `/app/services` like we do now. 
+  - If the functionality saves to the database (mutations for example) then put these classes in `/app/services`. 
   - If it's business logic that does _not_ save to the database that we should still test, put these into classes into the `/app/graphql/resolvers` folder.
   - Corresponding spec files should go in `/spec/graphql/resolvers` and `/spec/services/`. 
 
@@ -38,8 +38,7 @@ business logic to various classes in `/graphql/resolvers` and `/services/user_se
  - app/graphql/types/user_type.rb line 38
 
 ### Manual Testing Instructions
-After you've moved business logic into classes and have green tests on them it's still possible that the interaction between the
-classes and GraphQL was broken in the process. To make sure everything on the GraphQL side still functions properly:
+After you've moved business logic into classes and have green tests on them it's still possible that the interaction between the classes and GraphQL was broken in the process. To make sure everything on the GraphQL side still functions properly:
 1. Run `$ rails db:seed` in terminal.
 2. Start your Rails server. In terminal you can do this through `$ rails s`.
 3. Use [GraphiQL](https://electronjs.org/apps/graphiql) to test the methods you previously changed to make sure they still work.
@@ -114,4 +113,4 @@ Then verify that the firstName and lastName were updated properly to "Jane" and 
 
 ### Assignment Submission
 
-After you have completed the assignment, send a link of your repo to Roger and Ben for review.
+After you have completed the assignment create a pull request and add rogergraves as a reviewer.
